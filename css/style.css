@@ -1,8 +1,6 @@
 /* change these */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,15 +12,15 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #1b90fd;
+  --link-color: #1b90fd;
+  --link-hover-color: #304ca8;
+  --color-4: #eeeeee;
+  --color-5: #19181a;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --primary-font: "Source Sans Pro", sans-serif;
+  --secondary-font: font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  --main-text-color: #0f0f0f;
 
   --white-space: 1rem;
 }
@@ -37,7 +35,7 @@ a {
 
 button:hover {
   background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  border:solid 1px var(--link-hover-color);
 }
 
 button:active {
@@ -46,7 +44,7 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
+  text-decoration: underline;
 }
 html {
   font-size: 100%;
@@ -154,16 +152,13 @@ ul li:last-child {
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/TexturesCom_PaperCrumpled0004_1_seamless_S.jpg) top left repeat;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+  background: url(../img/TexturesCom_PaperDecorative0059_1_seamless_S.jpg) top left repeat;
 }
 
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
 
 .texture-swatch-3 {
   background: url(../img/white_paperboard.png) top left repeat;
@@ -181,23 +176,30 @@ ul li:last-child {
 }
 
 button {
-  padding: 1rem;
-  border-radius: 4px;
+  padding: 1rem 1.5rem;
   background: var(--link-color);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
-  letter-spacing: 1px;
+  font: 1.1em var(--primary-font);
+  letter-spacing: 3px;
   color: white;
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 0 0; /* 22S - 0 margin-bottom mobile */
+  border-radius: 3px;
+  border:solid 1px var(--link-color);
 }
 
 .secondary-button {
-  background: var(--color-5);
+  background: white;
+  color:var(--color-5);
+  border:solid 1px var(--color-5);
+}
+
+.secondary-button:hover {
+  color:white;
+  border-color: var(--link-hover-color);
 }
 
 button:focus,
@@ -218,8 +220,8 @@ button:focus-within {
 
 .h2-sample {
   font-family: var(--secondary-font);
-  font-style: italic;
   font-size: 1.25rem;
+  letter-spacing: 0.05rem;
 }
 
 p.typography-sample {
@@ -237,9 +239,8 @@ em {
 }
 
 a {
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
   color: var(--link-color);
-  font-weight: bold;
   text-decoration: none;
   transition: all 0.2s;
 }
